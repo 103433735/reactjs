@@ -6,25 +6,24 @@ const ToDoNew = (props) => {
   //useState hook
   //const valueInput = ""
   const [valueInput, setValueInput] = useState("") 
+  
   const handleClick = () => {
     addNewToDo(valueInput)
+    setValueInput("")
   }
   const handleOnChange = (name) => {
     console.log("Changing...", name)
     setValueInput(name)
   }
 
-
-
-
     return(
       <>
        <div className='todo-new'>
-        <input onChange={(event) => handleOnChange(event.target.value)} type="text"/>
+        <input 
+          onChange={(event) => handleOnChange(event.target.value)}
+          value={valueInput} 
+          type="text"/>
         <button onClick={handleClick}>Add</button>
-        <div>
-          My text input is {valueInput}
-        </div>
         </div>
       </>
 

@@ -10,7 +10,6 @@ import reactLogo from './assets/react.svg'
 //component = html + css + js
 //Chuyen doi sang EC6 arrow function
 const App = () => {
-  const [count, setCount] = useState(0)
   const name = "DucNguyenAnh"
   const age = 23
   const data = {
@@ -46,6 +45,7 @@ const App = () => {
 
     <ToDoNew
     addNewToDo = {addNewToDo}></ToDoNew>
+
     <ToDoData
      name={name}
      data = {data}

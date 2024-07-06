@@ -1,6 +1,15 @@
 .todo-title {
-    font-size: 20;
-    color: red;
+    font-size: 60px;
+    color: rgb(56, 56, 94);
+}
+.todo-data {
+  border-radius: 16px;
+  border-width: 2px;
+  border-color: white;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {

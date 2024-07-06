@@ -1,13 +1,22 @@
+import './todo.css'
 const ToDoData = (props) => {
     //Object destructuring --> lay data co trong props. Props la 1 object. Nen khi goi ra, chung ta co the de khuyet danh
-    const {name, age, data} = props
+    const {todoList} = props
     return(
         <div className='todo-data'>
-        <div>My name is {name}</div>
-        <div>My name is {age}</div> 
-        <div>Learning React</div>
-        <div>Learning Objective-C</div>
-        <div>{JSON.stringify(props.todoList)}</div>
+          {todoList.map((item, index) => {
+            return(
+              <>
+                <div className="todo-item">
+                  {item.name}
+                  <button>Delete</button>
+                  </div>
+              </>
+            )
+          })}
+          {/* <div>Learning React</div> */}
+          {/* <div>Learning Objective-C</div> */}
+          {/* <div>{JSON.stringify(props.todoList)}</div> */}
       </div>
     )
 }
