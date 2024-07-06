@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
-import './App.css'
 import './todo/todo.css'
 import MyComponent from './learn/MyComponent'
 import MySecondComponent from './learn/MySecondComponent'
