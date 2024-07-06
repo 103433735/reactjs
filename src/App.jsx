@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
-import './todo/todo.css'
-import MyComponent from './learn/MyComponent'
-import MySecondComponent from './learn/MySecondComponent'
-import { ToDoNew } from './todo/ToDoNew'
-import { ToDoData } from './todo/ToDoData'
+import './components/todo/todo.css'
+import MyComponent from './components/learn/MyComponent'
+import MySecondComponent from './components/learn/MySecondComponent'
+import { ToDoNew } from './components/todo/ToDoNew'
+import { ToDoData } from './components/todo/ToDoData'
 import reactLogo from './assets/react.svg'
+import Header from './layout/header'
+import Footer from './layout/footer'
 //component = html + css + js
 //Chuyen doi sang EC6 arrow function
 const App = () => {
@@ -41,7 +43,9 @@ const App = () => {
   }
   // addNewToDo()
   return (
-    <div className="todo-container">
+    <>
+    <Header></Header>
+        <div className="todo-container">
       <div className='todo-title'>Todo list</div>
 
     <ToDoNew
@@ -69,8 +73,10 @@ const App = () => {
       <img src={reactLogo} className='logo'/>
     </div>
     } */}
-
     </div>
+    <Footer></Footer>
+    </>
+
 
   )
 }
