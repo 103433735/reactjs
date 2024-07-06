@@ -3,9 +3,10 @@ import { Component } from "react";
 import './style.css';
 
 const MyComponent = () => {
+  const name = "DucNA"
     return(
       <>
-      <div className="child">DucNA</div>
+      <div className="child">{name}</div>
       </>
       
     );
