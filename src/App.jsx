@@ -26,6 +26,17 @@ const App = () => {
     setTodoList([...todoList, newTodo])
   }
 
+  const removeItem = (id) => {
+    const todoListCache = todoList.filter((item) => { item !== id})
+    setTodoList(todoListCache)
+    // todoListCache.map((item) => {
+    //   if (id == item.id) {
+    //     todoListCache.filter((item) => {})
+    //   }
+    //   setTodoList(todoListCache)
+    // })
+  }
+
   function randomNumber(min,max) {
     return Math.floor(Math.random() * (max-min + 1) + min)
   }
@@ -35,17 +46,19 @@ const App = () => {
       <div className='todo-title'>Todo list</div>
 
     <ToDoNew
-    addNewToDo = {addNewToDo}></ToDoNew>
+    addNewToDo = {addNewToDo}
+    ></ToDoNew>
 
     {todoList.length > 0 
     ? <ToDoData
      name={name}
      data = {data}
      todoList = {todoList}
+     removeItem = {removeItem}
      ></ToDoData> : <div className='todo-image'>
      <img src={reactLogo} className='logo'/>
    </div>}
-   
+
     {/* <ToDoData
      name={name}
      data = {data}
