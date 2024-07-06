@@ -7,6 +7,7 @@ const ToDoData = (props) => {
         <div>My name is {age}</div> 
         <div>Learning React</div>
         <div>Learning Objective-C</div>
+        <div>{JSON.stringify(props.todoList)}</div>
       </div>
     )
 }

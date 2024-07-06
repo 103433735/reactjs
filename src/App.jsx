@@ -17,7 +17,16 @@ const App = () => {
     name: "Duc Nguyen Anh",
     age: 23
   }
-
+  const [todoList, setTodoList] = useState([
+    {
+      id: 1,
+      name: "Learning React"
+    },
+    {
+      id: 2,
+      name: "Learning Objective-C"
+    }
+  ])
   const addNewToDo = (name) => {
     alert(`call me ${name}`)
   }
@@ -32,6 +41,7 @@ const App = () => {
     <ToDoData
      name={name}
      data = {data}
+     todoList = {todoList}
      ></ToDoData>
 
     <div className='todo-image'>
