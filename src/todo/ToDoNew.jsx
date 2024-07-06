@@ -9,13 +9,11 @@ const ToDoNew = (props) => {
   
   const handleClick = () => {
     addNewToDo(valueInput)
-    setValueInput("")
   }
   const handleOnChange = (name) => {
     console.log("Changing...", name)
     setValueInput(name)
   }
-
     return(
       <>
        <div className='todo-new'>

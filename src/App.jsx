@@ -16,16 +16,7 @@ const App = () => {
     name: "Duc Nguyen Anh",
     age: 23
   }
-  const [todoList, setTodoList] = useState([
-    {
-      id: 1,
-      name: "Learning React"
-    },
-    {
-      id: 2,
-      name: "Learning Objective-C"
-    }
-  ])
+  const [todoList, setTodoList] = useState([])
 
   const addNewToDo = (name) => {
     const newTodo = {
