@@ -17,12 +17,22 @@ const App = () => {
     name: "Duc Nguyen Anh",
     age: 23
   }
+
+  const addNewToDo = (name) => {
+    alert(`call me ${name}`)
+  }
+
+  // addNewToDo()
   return (
     <div className="todo-container">
       <div className='todo-title'>Todo list</div>
 
-    <ToDoNew></ToDoNew>
-    <ToDoData name={name} data = {data}></ToDoData>
+    <ToDoNew
+    addNewToDo = {addNewToDo}></ToDoNew>
+    <ToDoData
+     name={name}
+     data = {data}
+     ></ToDoData>
 
     <div className='todo-image'>
       <img src={reactLogo} className='logo'/>
