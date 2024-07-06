@@ -27,10 +27,18 @@ const App = () => {
       name: "Learning Objective-C"
     }
   ])
+
   const addNewToDo = (name) => {
-    alert(`call me ${name}`)
+    const newTodo = {
+      id: randomNumber(0,99999),
+      name: name
+    }
+    setTodoList([...todoList, newTodo])
   }
 
+  function randomNumber(min,max) {
+    return Math.floor(Math.random() * (max-min + 1) + min)
+  }
   // addNewToDo()
   return (
     <div className="todo-container">
